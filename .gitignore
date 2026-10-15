@@ -1,0 +1,15 @@
+node_modules/
+logs/
+backups/
+releases/
+test-home/
+.env
+.env.*
+!.env.example
+*.log
+*.tgz
+*.zip
+edge-profile/
+sessions-*.json
+.DS_Store
+Thumbs.db

@@ -1,0 +1,54 @@
+{
+  "name": "dsh-web-channels",
+  "version": "0.2.2",
+  "private": true,
+  "type": "module",
+  "description": "Gemini and Perplexity browser channels for DSH Desktop",
+  "meta": {
+    "title": "Gemini / Perplexity 网页通道",
+    "description": "使用网页当前模型，支持半自动、全自动及 DSH 工具调用。"
+  },
+  "license": "MIT",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "dsh.patch.yml",
+    "README.md",
+    "CHANGELOG.md",
+    "UPSTREAM.md",
+    "LICENSE",
+    "使用说明.md"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "playwright-core": "1.61.1",
+    "ajv": "8.20.0"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/schemastery": "~3.18.4",
+    "@deepseek-ai/dsh-llm": "*"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./dsh.patch.yml"
+    }
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "test:browser": "node tests/browser-fixtures.mjs && node tests/upgrade-browser-fixtures.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dv868/dsh-web-channels.git"
+  },
+  "homepage": "https://github.com/dv868/dsh-web-channels#readme",
+  "bugs": {
+    "url": "https://github.com/dv868/dsh-web-channels/issues"
+  }
+}

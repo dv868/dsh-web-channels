@@ -1,0 +1,8 @@
+- insert:
+    - id: llm-web-channels
+      name: './lib/index.js'
+      config:
+        debugPort: 9336
+        managedPort: 9336
+        geminiEnabled: true
+        perplexityEnabled: true
